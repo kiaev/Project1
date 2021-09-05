@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -15,13 +14,14 @@ public class Main {
 
         String[] afterSplit = Splitter.split(beforeSplit);
 
-        // Реверс объекта
+        // Перебор массива
 
-        for (int i=0; i<=afterSplit.length-1; i++){
-            char[] array = afterSplit[i].toCharArray();
-            System.out.print(ReverseClass.reverse(array));
-            System.out.print(" ");
-        }
+        String ans = Iterater.iterate(afterSplit);
+
+        // Вывод на экран, убираем лишние пробелы в коне и начале полученной строки
+
+        System.out.println(ans.trim());
 
     }
+
 }
