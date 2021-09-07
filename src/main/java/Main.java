@@ -8,19 +8,13 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        String beforeSplit = scan.nextLine();
+        // Реверс объекта
 
-        // Сплит объекта с разделителем " "
-
-        String[] afterSplit = Splitter.split(beforeSplit);
-
-        // Перебор массива
-
-        String ans = Iterater.iterate(afterSplit);
+        String afterSplit = Reverse.spliter(scan.nextLine());
 
         // Вывод на экран, убираем лишние пробелы в коне и начале полученной строки
 
-        System.out.println(ans.trim());
+        System.out.println(afterSplit);
 
     }
 
