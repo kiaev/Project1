@@ -12,7 +12,7 @@ public class Reverse {
 
         // Удаляем лишние пробелы
 
-        return ans;
+        return ans.trim();
     }
 
     private static String iterate (String[] words){
