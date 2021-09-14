@@ -2,6 +2,6 @@
 */*
 !src/*
 !pom.xml
-*.docx
-*.ini
+Задача 1 .docx
+myArtifact.iml
 
