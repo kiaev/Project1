@@ -1,6 +1,2 @@
 # игнорировать все кроме src и pom.xml
-*.*
-!src/main/*
-!src/test/*
-!pom.xml
 
