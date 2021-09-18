@@ -3,20 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Ignore;
 
 public class ReverserTest {
-
-    String str1 = "ABC";
-    String str2 = "CBA";
-    String str3 = "";
-    String str4 = null;
-    String str5 = "abcd efg hijk";
-    String str6 = "a1bc!de2f@gh";
-    String str7 = "a1Bc!D e2f@G hI3jK#";
-    String str8;
-    String ans5 =  "dcba gfe kjih";
-    String ans6 = "h1gf!ed2c@ba";
-    String ans7 =  "D1cB!a G2f@e Kj3Ih#";
-
-
+    
     @Test
     public void testReverse() {
         String str = "ABC";
