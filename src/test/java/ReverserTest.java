@@ -1,6 +1,6 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+import org.junit.Ignore;
 
 public class ReverserTest {
 
@@ -11,108 +11,76 @@ public class ReverserTest {
     String str5 = "abcd efg hijk";
     String str6 = "a1bc!de2f@gh";
     String str7 = "a1Bc!D e2f@G hI3jK#";
+    String str8;
     String ans5 =  "dcba gfe kjih";
     String ans6 = "h1gf!ed2c@ba";
     String ans7 =  "D1cB!a G2f@e Kj3Ih#";
 
 
-
     @Test
     public void testReverse() {
-
-        // Проверка реверса строк
-
-        String expect = str2;
-
-        String result = Reverse.spliter(str1);
-
-        // expect == result
-
+        String str = "ABC";
+        String ans = "CBA";
+        String expect = ans;
+        String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertEquals(expect,result);
-
-        System.out.println("method 'Reverse' is worked succesful");
-
+        System.out.println("test 'Reverse Alpha versions' is worked succesful");
     }
 
     @Test
     public void testEmpty() {
-
-        String expect = str3;
-
-        String result = Reverse.spliter(str1);
-
+        String str = "ABC";
+        String ans = "";
+        String expect = ans;
+        String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertNotEquals(expect,result);
-
-        System.out.println("Is not Empty, succesful");
-
+        System.out.println("test 'Is not Empty', succesful");
     }
 
     @Test
     public void testNULL() {
-
-        String expect = str4;
-
-        String result = Reverse.spliter(str1);
-
+        String str = "ABC";
+        String ans = null;
+        String expect = ans;
+        String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertNotEquals(expect,result);
-
-        System.out.println("Is not NULL, succesful");
-
+        System.out.println("test 'Is not NULL', succesful");
     }
 
     @Test
-    public void testReverse1() {
-
-        // Проверка реверса строк
-
-        String expect = ans5;
-
-        String result = Reverse.spliter(str5);
-
-        // expect == result
-
+    public void testReverseSimple() {
+        String str = "abcd efg hijk";
+        String ans =  "dcba gfe kjih";
+        String expect = ans;
+        String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertEquals(expect,result);
-
-        System.out.println("method 'Reverse 1' is worked succesful");
-
+        System.out.println("test 'ReverseSimple' is worked succesful");
     }
 
     @Test
-    public void testReverse2() {
-
-        // Проверка реверса строк
-
-        String expect = ans6;
-
-        String result = Reverse.spliter(str6);
-
-        // expect == result
-
+    public void testReverseSpecialSymbols() {
+        String str = "a1bc!de2f@gh";
+        String ans = "h1gf!ed2c@ba";
+        String expect = ans;
+        String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertEquals(expect,result);
-
-        System.out.println("method 'Reverse 2' is worked succesful");
-
+        System.out.println("test 'ReverseSpecialSymbols' is worked succesful");
     }
 
     @Test
-    public void testReverse3() {
-
-        // Проверка реверса строк
-
-        String expect = ans7;
-
-        String result = Reverse.spliter(str7);
-
-        // expect == result
-
+    public void testReverseSpecialSymbolsAndNumerics() {
+        String str = "a1Bc!D e2f@G hI3jK#";
+        String ans =  "D1cB!a G2f@e Kj3Ih#";
+        String expect = ans;
+        String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertEquals(expect,result);
-
-        System.out.println("method 'Reverse 3' is worked succesful");
-
+        System.out.println("test 'ReverseSpecialSymbolsAndNumerics' is worked succesful");
     }
 
-
-
-
+    @Ignore
+    public void testNullPointerException(){
+        String str = null;
+        String result = Reverser.reverseWithoutSpecialSymbols(str);
+    }
 
 }
