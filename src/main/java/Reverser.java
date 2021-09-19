@@ -1,15 +1,17 @@
+import java.util.StringJoiner;
+
 public class Reverser {
 
     public static String reverseWithoutSpecialSymbols (String str){
         String[] words = checkNull(str).split(" ");
-        String message = "";
+        StringJoiner message = new StringJoiner(" ");
 
         for (int i = 0; i <= words.length - 1; i ++){
             char[] array = words[i].toCharArray();
             // Реверс символьного массива, преобразование к строке
-            message += String.valueOf(Reverser.iteratingThroughCharacters(array)) + " ";
+            message.add (String.valueOf(Reverser.iteratingThroughCharacters(array)));
         }
-        return message.trim();
+        return message.toString().trim();
     }
 
     private static String checkNull (String str) {
