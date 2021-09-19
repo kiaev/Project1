@@ -11,7 +11,6 @@ public class ReverserTest {
         String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertEquals(expect,result);
     }
-
     @Test
     public void empty_ShouldThrowAnExceptionIfStringEmpty() {
         String str = "ABC";
@@ -20,7 +19,6 @@ public class ReverserTest {
         String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertNotEquals(expect,result);
     }
-
     @Test
     public void null_ShouldThrowAnExceptionIfStringNull() {
         String str = "ABC";
@@ -29,7 +27,6 @@ public class ReverserTest {
         String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertNotEquals(expect,result);
     }
-
     @Test
     public void simple_ShouldReversWholeWordsIfWordsInLowCaseAndWithoutSpecialSymbols() {
         String str = "abcd efg hijk";
@@ -38,7 +35,6 @@ public class ReverserTest {
         String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertEquals(expect,result);
     }
-
     @Test
     public void difficultOne_ShouldReversWholeWord_IfOnlyOneWordWithSpicialSymbolsAndNummerics() {
         String str = "a1bc!de2f@gh";
@@ -47,7 +43,6 @@ public class ReverserTest {
         String result = Reverser.reverseWithoutSpecialSymbols(str);
         assertEquals(expect,result);
     }
-
     @Test
     public void difficultSeveral_ShouldReversWholeWords_IfSeveralWordsWithSpicialSymbolsAndNummerics() {
         String str = "a1Bc!D e2f@G hI3jK#";
