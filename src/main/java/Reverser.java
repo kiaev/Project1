@@ -4,7 +4,7 @@ public class Reverser {
         String[] words = checkNull(str).split(" ");
         String message = "";
 
-        for (int i = 0; i <= words.length - 1; i ++ ){
+        for (int i = 0; i <= words.length - 1; i ++){
             char[] array = words[i].toCharArray();
             // Реверс символьного массива, преобразование к строке
             message += String.valueOf(Reverser.iteratingThroughCharacters(array)) + " ";
@@ -29,18 +29,18 @@ public class Reverser {
         while (l < r) {
             // Игнорировать специальные символы
             if (!Character.isAlphabetic(str[l])) {
-                l ++ ;
+                l++;
             }
             else if(!Character.isAlphabetic(str[r])) {
-                r -- ;
+                r--;
             }
                 // И str [l], и str [r] не являются пространственными
             else {
                 char tmp = str[l];
                 str[l] = str[r];
                 str[r] = tmp;
-                l ++ ;
-                r -- ;
+                l++;
+                r--;
             }
         }
         return str;
