@@ -9,7 +9,7 @@ public class Reverser {
         for (int i = 0; i <= words.length - 1; i ++){
             char[] array = words[i].toCharArray();
             // Реверс символьного массива, преобразование к строке
-            message.add (String.valueOf(Reverser.iteratingThroughCharacters(array)));
+            message.add (String.valueOf(Reverser.reverseOneWord(array)));
         }
         return message.toString().trim();
     }
@@ -23,7 +23,7 @@ public class Reverser {
         return checkvalue;
     }
 
-    private static char[] iteratingThroughCharacters (char[] str)  {
+    private static char[] reverseOneWord (char[] str)  {
         // Инициализируем левый и правый указатели Обход строки с обоих концов до 'l' и 'r'
         int r = str.length - 1;
         int l = 0;
