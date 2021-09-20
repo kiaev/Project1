@@ -2,7 +2,7 @@ import java.util.StringJoiner;
 
 public class Reverser {
 
-    public static String reverseWithoutSpecialSymbols (String str){
+    public static String reverseOnlyWords (String str){
         String[] words = checkNull(str).split(" ");
         StringJoiner message = new StringJoiner(" ");
 
@@ -11,14 +11,14 @@ public class Reverser {
             // Реверс символьного массива, преобразование к строке
             message.add (String.valueOf(Reverser.reverseOneWord(array)));
         }
-        return message.toString().trim();
+        return message.toString();
     }
 
     private static String checkNull (String str) {
         String checkvalue = str;
 
         if  (checkvalue == null){
-            throw new IllegalArgumentException("Значение строки не должно быть null");
+            throw new IllegalArgumentException("The string value must not be null");
         }
         return checkvalue;
     }
