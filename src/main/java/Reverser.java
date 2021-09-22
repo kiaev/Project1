@@ -4,12 +4,11 @@ public class Reverser {
 
     public static String reverseOnlyWords (String str){
         String[] words = checkNull(str).split(" ");
+
         StringJoiner message = new StringJoiner(" ");
 
         for (int i = 0; i <= words.length - 1; i ++){
-            char[] array = words[i].toCharArray();
-            // Реверс символьного массива, преобразование к строке
-            message.add (String.valueOf(Reverser.reverseOneWord(array)));
+            message.add(reverseOneWord(words[i]));
         }
         return message.toString();
     }
@@ -23,28 +22,30 @@ public class Reverser {
         return checkvalue;
     }
 
-    private static char[] reverseOneWord (char[] str)  {
+    private static String reverseOneWord (String oneWord)  {
+        char[] array = oneWord.toCharArray();
+
         // Инициализируем левый и правый указатели Обход строки с обоих концов до 'l' и 'r'
-        int r = str.length - 1;
+        int r = array.length - 1;
         int l = 0;
 
         while (l < r) {
             // Игнорировать специальные символы
-            if (!Character.isAlphabetic(str[l])) {
+            if (!Character.isAlphabetic(array[l])) {
                 l++;
             }
-            else if(!Character.isAlphabetic(str[r])) {
+            else if(!Character.isAlphabetic(array[r])) {
                 r--;
             }
                 // И str [l], и str [r] не являются пространственными
             else {
-                char tmp = str[l];
-                str[l] = str[r];
-                str[r] = tmp;
+                char tmp = array[l];
+                array[l] = array[r];
+                array[r] = tmp;
                 l++;
                 r--;
             }
         }
-        return str;
+        return String.valueOf(array);
     }
 }
