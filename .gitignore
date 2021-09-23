@@ -1,2 +1,6 @@
-# игнорировать все файлы типа docx
-*.docx
+#игнорировать все кроме src и pom.xml
+.idea/*
+target/*
+Задача 1 .docx
+myArtifact.iml
+
