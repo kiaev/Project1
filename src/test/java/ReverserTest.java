@@ -9,19 +9,10 @@ public class ReverserTest {
         String result = Reverser.reverseOnlyWords(str);
         assertEquals(ans,result);
     }
-    @Test
-    public void reverseOnlyWords_ShouldThrowAnExceptionIf_IfEmptyString() {
-        String str = "ABC";
-        String ans = "";
-        String result = Reverser.reverseOnlyWords(str);
-        assertFalse(result.isEmpty());
-    }
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void reverseOnlyWords_ShouldThrowAnException_IfStringIsNull() {
-        String str = "ABC";
-        String ans = null;
+        String str = null;
         String result = Reverser.reverseOnlyWords(str);
-        assertNotEquals(ans,result);
     }
     @Test
     public void simple_ShouldReversWholeWords_IfWordsInLowCaseAndWithoutSpecialSymbols() {

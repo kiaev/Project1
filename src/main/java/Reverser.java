@@ -3,7 +3,8 @@ import java.util.StringJoiner;
 public class Reverser {
 
     public static String reverseOnlyWords (String str){
-        String[] words = checkNull(str).split(" ");
+        checkNull(str);
+        String[] words = str.split(" ");
 
         StringJoiner message = new StringJoiner(" ");
 
@@ -13,13 +14,10 @@ public class Reverser {
         return message.toString();
     }
 
-    private static String checkNull (String str) {
-        String checkvalue = str;
-
-        if  (checkvalue == null){
+    private static void checkNull (String str) {
+        if  (str == null){
             throw new IllegalArgumentException("The string value must not be null");
         }
-        return checkvalue;
     }
 
     private static String reverseOneWord (String oneWord)  {
